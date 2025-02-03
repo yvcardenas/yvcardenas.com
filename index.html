@@ -28,7 +28,13 @@
         <main>
             <section>
                 <h2>Welcome to My Portfolio!</h2>
-                <p>Hi, my name is Yvanna Cardenas. I am a student at the University of California, San Diego majoring in Computer Science and minoring in Entrepreneurship and Innovation.</p>
+                <p>Hi, my name is <span class="highlight">Yvanna Cardenas</span>. I am a student at the University of California, San Diego majoring in <b>Computer Science</b> and minoring in <i>Entrepreneurship and Innovation</i>.</p>
+                <p>Here's a definition of a concept in software development: <dfn>Agile Methodology</dfn> refers to an iterative approach to project management and software development.</p>
+                
+                <address>
+                    Contact: <a href="mailto:yvcardenas@ucsd.edu">yvcardenas@ucsd.edu</a><br>
+                    San Diego, California
+                </address>
             </section>
 
             <section>
@@ -39,6 +45,29 @@
                     <dt>Graduation</dt>
                     <dd>June 2026</dd>
                 </dl>
+            </section>
+
+            <section>
+                <h3>Search for Projects</h3>
+                <form>
+                    <label for="project-search">Project Search:</label>
+                    <input type="search" id="project-search" name="project-search" list="project-list" placeholder="Enter a project name...">
+                    <datalist id="project-list">
+                        <option value="Developer Journal"></option>
+                        <option value="Entertainment Recommender"></option>
+                    </datalist>
+
+                    <label for="category-select">Filter by Category:</label>
+                    <select id="category-select" name="category-select">
+                        <optgroup label="Technical Projects">
+                            <option value="web-development">Web Development</option>
+                            <option value="data-science">Data Science</option>
+                        </optgroup>
+                        <optgroup label="Other Projects">
+                            <option value="research">Research</option>
+                        </optgroup>
+                    </select>
+                </form>
             </section>
         </main>
         <footer>
