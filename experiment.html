@@ -69,19 +69,31 @@
                 <h3>Below is a quick demo of multimedia elements:</h3>
                 <hr>
                 <picture>
-                    <source srcset="./media/portfolio-image.webp" type="image/webp">
-                    <img src="./media/portfolio-image.jpg" alt="Portfolio Intro Image">
+                    <img src="./media/latte.jpg" alt="Latte Art Image" width="300">
                 </picture>
                 <hr>
                 <audio controls>
-                    <source src="./media/audio-sample.mp3" type="audio/mpeg">
+                    <source src="./media/my-favorite-part.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <hr>
                 <video controls width="300">
-                    <source src="./media/video-sample.mp4" type="video/mp4">
+                    <source src="./media/videoplayback.mp4" type="video/mp4">
                     Your browser does not support the video element.
                 </video>
+            </section>
+
+            <section>
+                <h2>Custom Elements Demo</h2>
+
+                <!-- Custom Semantic CSS Element -->
+                <semantic-card>
+                    <h3>This is a Custom Semantic Card</h3>
+                    <p>This custom element demonstrates structured content styling without modifying the DOM or adding scripting.</p>
+                </semantic-card>
+
+                <!-- Hello World Custom Element -->
+                <hello-world></hello-world>
             </section>
 
             <noscript>
@@ -91,5 +103,38 @@
         <footer>
             <p>&copy; 2025 Yvanna Cardenas</p>
         </footer>
+
+        <!-- Custom Elements Definition -->
+        <script>
+            // Hello World Custom Element 
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    console.log('Hello, world!');
+                }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
+
+        <style>
+            semantic-card {
+                display: block;
+                padding: 20px;
+                border: 2px solid black;
+                background-color: whitesmoke;
+                margin: 20px 0;
+            }
+
+            semantic-card h3 {
+                margin: 0;
+                font-size: 1.5rem;
+                color: black;
+            }
+
+            semantic-card p {
+                margin-top: 10px;
+                font-size: 1rem;
+                color: gray;
+            }
+        </style>
     </body>
 </html>
